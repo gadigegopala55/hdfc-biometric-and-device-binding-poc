@@ -1,0 +1,13 @@
+<div fxLayout="column wrap" class="bio-alert-card basic-card" fxLayoutGap="20" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div class="finger-icon">
+      <img imgSrc="Web/fingerprint.svg" class="finger-icon-img">
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+    <div style="text-align: center;" class="heading-title">
+      Do you want to enable
+      Biometric option!</div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutGap="10" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="primery-btn" (click)="biometricAccept()">YES</button><button mat-raised-button class="secondry-btn" (click)="closeBiometricDialog()">NO</button></div>
+</div>

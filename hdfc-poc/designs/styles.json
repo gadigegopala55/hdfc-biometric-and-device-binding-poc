@@ -1,0 +1,25 @@
+{
+    "classes": [
+        "text-primery",
+        "text-secondry",
+        "bg-primery",
+        "basic-card",
+        "heading-title",
+        "sub-heading-title",
+        "basic-inputfiled",
+        "mat-form-field-wrapper",
+        "mat-form-field-infix",
+        "primery-btn",
+        "secondry-btn",
+        "login-container",
+        "logo",
+        "login-card",
+        "code-title",
+        "bio-alert-card",
+        "finger-icon",
+        "finger-icon-img",
+        "otp-verification-card",
+        "message-icon",
+        "message-icon-img"
+    ]
+}

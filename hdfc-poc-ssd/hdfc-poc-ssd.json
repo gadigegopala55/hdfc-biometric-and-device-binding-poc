@@ -1,0 +1,13 @@
+{
+    "displayName": "Hdfc-poc-ssd",
+    "appName": "hdfc-poc-ssd",
+    "description": "Hdfc poc ssd (end-points)",
+    "lastModified": "2023-08-30T06:26:42.824Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "apiOnly",
+    "templateName": "blank",
+    "createDate": "2023-08-30T06:26:37.585Z",
+    "analyticsId": "a6130d01-e88e-c694-69b1-ec076c01e9d3",
+    "createdStudioVersion": "9.1.4"
+}

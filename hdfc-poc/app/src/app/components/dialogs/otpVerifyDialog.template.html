@@ -1,0 +1,24 @@
+<div fxLayout="column wrap" class="otp-verification-card basic-card" fxLayoutGap="20" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div class="message-icon">
+      <img imgSrc="Web/otp.png" class="message-icon-img">
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div class="heading-title">
+      Verification Code</div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div>
+      <!-- <ng-otp-input  (onInputChange)="onOtpChange($event)" formControlName="otp" [config]="{length:4}"></ng-otp-input> -->
+      <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:4}"></ng-otp-input>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutGap="10" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="primery-btn" (click)="closeDialog()" type="button">VERIFY</button><button mat-raised-button class="secondry-btn" (click)="closeDialog()" type="button">CANCEL</button></div>
+  <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+    <div style="text-align: center;" class="sub-heading-title">
+      Haven&apos;t recived the verification code?<br>
+      <span class="text-primery">Resend</span>
+    </div>
+  </div>
+</div>

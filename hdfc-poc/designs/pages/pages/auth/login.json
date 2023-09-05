@@ -1,0 +1,1576 @@
+[
+    {
+        "id": "sd_kygG0KgUhTYJTmUl",
+        "type": "tab",
+        "createdDate": "2023-08-29T14:34:54.487Z",
+        "label": "login",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_7iGTLHWasL4bU7ew",
+        "type": "OnInit",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_7iGTLHWasL4bU7ew",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_laLGNWFyPcUvk61C"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_laLGNWFyPcUvk61C",
+        "type": "PageVariables",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "activeAgent",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "loginError",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "agentCodeValue",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "agentFileType",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": "text"
+                }
+            },
+            {
+                "textIp": "biometricFlag",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "activeDevice",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "deviceId",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_laLGNWFyPcUvk61C",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_CMdOx2vMUwFSyQvw",
+                "sd_Gt7YwB1jbdkZMs07",
+                "sd_OQqccPNQhxH2LFDL",
+                "sd_9oB0qBXk49ogUxDk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_lv8doz5QkmBKn0hQ",
+        "type": "OpenDialog",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Biometric Dialogbox",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_W3grTVJ3LpFXsMUk",
+            "label": "biometricDialog"
+        },
+        "relativePath": "app/components/dialogs/biometricDialog",
+        "data": "bh.responseApi.data",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page",
+        "functionName": "biometricDialogbox",
+        "category": "Dialog",
+        "x": 1025,
+        "y": 560,
+        "wires": [
+            [],
+            [
+                "sd_PfrGbQnNht0cJaO8"
+            ],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "bh",
+                "value": "responseApi.data",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eFklzhC48xXbFwUV",
+        "type": "PageCallService",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_FIBZuy3HVJ6QWLZD",
+            "type": "tab",
+            "createdDate": "2023-08-31T09:29:02.478Z",
+            "label": "agency_services",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_YjqurYP3HtvTizKJ",
+            "flowName": "checkDevice"
+        },
+        "inputVariables": [
+            {
+                "key": "device_id",
+                "map": true,
+                "valueType": "bh",
+                "value": "sendDeviceId"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "responseApi",
+                "valueType": "bh",
+                "value": "responseData",
+                "mapVarName": "responseApi",
+                "localVar": "bh.responseData"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/agency_services",
+        "startName": "checkDevice",
+        "inputParams": [
+            "bh.sendDeviceId"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_eFklzhC48xXbFwUV",
+        "category": "General",
+        "x": 325,
+        "y": 340,
+        "wires": [
+            [
+                "sd_xbw842RvPDQRXOb1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_uSuty290CN6tmWyi",
+        "type": "PageStart",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "check device is binded",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "checkDeviceIsBinded",
+        "category": "General",
+        "x": 85,
+        "y": 340,
+        "wires": [
+            [
+                "sd_zfJD8QhwwkHHfNy6"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_AEeNRVU4gtv9Qs2c",
+        "type": "PageCallService",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_kygG0KgUhTYJTmUl",
+            "type": "tab",
+            "createdDate": "2023-08-29T14:34:54.487Z",
+            "label": "login",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_uSuty290CN6tmWyi",
+            "flowName": "checkDeviceIsBinded"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "checkDeviceIsBinded",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_AEeNRVU4gtv9Qs2c",
+        "category": "General",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CMdOx2vMUwFSyQvw",
+        "type": "UseDependency",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Local Data Service",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "local_data_storeService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "localDataStore"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/local_data_store/local_data_store.service",
+        "serviceDesignerType": "pages",
+        "functionName": "localDataService",
+        "category": "Function",
+        "x": 285,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xbw842RvPDQRXOb1",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let responseData = bh.responseData;\n\nif(responseData.status != 200) {\n    page.localDataStore.removeActiveAgent();\n} \n\n// -- for Debugs:\nelse {\n    let { agent_code, biometric_flag, username } = bh.responseData.data;\n    let data = { agent_code, biometric_flag, username };\n    \n    // insert active agent in local data!\n    page.localDataStore.addActiveAgent(data);\n}\n\n// active agent data store in localDB \npage.activeAgent = page.localDataStore.getActiveAgent();",
+        "functionName": "sd_xbw842RvPDQRXOb1",
+        "category": "Function",
+        "x": 425,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zfJD8QhwwkHHfNy6",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// todo: get deviceId here\n\n// bh.sendDeviceId = page.deviceId;\n\n// ** if deviceId and active device is true \n// ** then send deviceID \n\nif(page.deviceId && page.activeDevice) {\n    bh.sendDeviceId = page.deviceId;\n} else {\n    bh.sendDeviceId = 7;\n}",
+        "functionName": "sd_zfJD8QhwwkHHfNy6",
+        "category": "Function",
+        "x": 205,
+        "y": 340,
+        "wires": [
+            [
+                "sd_eFklzhC48xXbFwUV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Z0xjL8ReDFV7I1JJ",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "auth fileds",
+        "script": "{\n    page.agentAuthForm = page.fb.group({\n        agentCode: [''],\n        password: ['']\n    });\n}",
+        "functionName": "authFileds",
+        "category": "Function",
+        "x": 385,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Gt7YwB1jbdkZMs07",
+        "type": "UseDependency",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Form Dependency",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormBuilder",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "fb"
+                },
+                "injectable": true
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "formDependency",
+        "category": "Function",
+        "x": 285,
+        "y": 220,
+        "wires": [
+            [
+                "sd_Z0xjL8ReDFV7I1JJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AKjiOUTVyBrVxuF1",
+        "type": "PageStart",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "directLogin",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "directLogin",
+        "category": "General",
+        "x": 85,
+        "y": 460,
+        "wires": [
+            [
+                "sd_Ei7vs32AQbENPYAT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_Ei7vs32AQbENPYAT",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let username = page.activeAgent.username;\nlet { password } = page.agentAuthForm.value;\n\nbh.bodyParams = {\n    username,\n    password\n}",
+        "functionName": "sd_Ei7vs32AQbENPYAT",
+        "category": "Function",
+        "x": 205,
+        "y": 460,
+        "wires": [
+            [
+                "sd_ZoNWya1phLWApFST"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_RwZBXw4ypk2DGMgS",
+        "type": "PageStart",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "agentLogin",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "agentLogin",
+        "category": "General",
+        "x": 85,
+        "y": 580,
+        "wires": [
+            [
+                "sd_9pLfdYL3hTfMBl4Z"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_9pLfdYL3hTfMBl4Z",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let {agentCode, password} = page.agentAuthForm.value;\n\nbh.bodyParams = {agent_code:agentCode, password};",
+        "functionName": "sd_9pLfdYL3hTfMBl4Z",
+        "category": "Function",
+        "x": 205,
+        "y": 580,
+        "wires": [
+            [
+                "sd_xxQ99QkLBkDysNSm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ZoNWya1phLWApFST",
+        "type": "PageCallService",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_FIBZuy3HVJ6QWLZD",
+            "type": "tab",
+            "createdDate": "2023-08-31T09:29:02.478Z",
+            "label": "agency_services",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_OOWShvT8HikI68M0",
+            "flowName": "agentLogin"
+        },
+        "inputVariables": [
+            {
+                "key": "bodyParams",
+                "map": true,
+                "valueType": "bh",
+                "value": "bodyParams"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "responseApi",
+                "valueType": "bh",
+                "value": "responseApi",
+                "mapVarName": "responseApi",
+                "localVar": "bh.responseApi"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/agency_services",
+        "startName": "agentLogin",
+        "inputParams": [
+            "bh.bodyParams"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_ZoNWya1phLWApFST",
+        "category": "General",
+        "x": 325,
+        "y": 460,
+        "wires": [
+            [
+                "sd_25FyU8We1OhHsaO1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_25FyU8We1OhHsaO1",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(\"responseApi:\", bh.responseApi);\n\nif(bh.responseApi.status != 200) {\n    page.loginError =  bh.responseApi.msg;\n} else {\n    page.loginError =  'Login Successfully';\n}\n",
+        "functionName": "sd_25FyU8We1OhHsaO1",
+        "category": "Function",
+        "x": 425,
+        "y": 460,
+        "wires": [
+            [
+                "sd_PZVqQs89sLFgKU5M"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_RuhYwaNoIZ01WwUl",
+        "type": "PageStart",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "onInputChange",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "onInputChange",
+        "category": "General",
+        "x": 625,
+        "y": 340,
+        "wires": [
+            [
+                "sd_HERm5y2ypHYMsQsf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_HERm5y2ypHYMsQsf",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// page.agentCodeValue = page.agentCodeValue;\nlet txtLength = bh.input.event?.length;\n\nif(txtLength == 2) {\n    page.agentCodeValue += '/';\n    // page.agentFileType = 'Number';\n}\n",
+        "functionName": "sd_HERm5y2ypHYMsQsf",
+        "category": "Function",
+        "x": 725,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_xxQ99QkLBkDysNSm",
+        "type": "PageCallService",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_FIBZuy3HVJ6QWLZD",
+            "type": "tab",
+            "createdDate": "2023-08-31T09:29:02.478Z",
+            "label": "agency_services",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_OOWShvT8HikI68M0",
+            "flowName": "agentLogin"
+        },
+        "inputVariables": [
+            {
+                "key": "bodyParams",
+                "map": true,
+                "valueType": "bh",
+                "value": "bodyParams"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "responseApi",
+                "valueType": "bh",
+                "value": "responseApi",
+                "mapVarName": "responseApi",
+                "localVar": "bh.responseApi"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/agency_services",
+        "startName": "agentLogin",
+        "inputParams": [
+            "bh.bodyParams"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_xxQ99QkLBkDysNSm",
+        "category": "General",
+        "x": 325,
+        "y": 580,
+        "wires": [
+            [
+                "sd_QgYADJtY45KIRw6b"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_93ZoyJvUuwxKP0qb",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.loginError = bh.responseApi.msg;",
+        "functionName": "sd_93ZoyJvUuwxKP0qb",
+        "category": "Function",
+        "x": 525,
+        "y": 560,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QgYADJtY45KIRw6b",
+        "type": "PageSwitch",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "check response status",
+        "property": "responseApi.status",
+        "propertyType": "bh",
+        "propertyGv": "bh.responseApi.status",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "200",
+                "vt": "num",
+                "gv": "200"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "checkResponseStatus",
+        "category": "Function",
+        "x": 425,
+        "y": 600,
+        "wires": [
+            [
+                "sd_93ZoyJvUuwxKP0qb"
+            ],
+            [
+                "sd_I9vzp02naeLKBZ5H"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_jL6CigQh6BoqfvIR",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let {username, agent_code, biometric_flag} = bh.responseApi.data[0];\n\n// insert deviceID here!\nbh.bodyParams = {\n    username,\n    device_id: page.deviceId,\n    // device_id: 5\n}\n\n// show message on screen\npage.loginError = bh.responseApi.msg;\n\n// insert active agent in local data!\nlet data = { agent_code, biometric_flag, username };\npage.localDataStore.addActiveAgent(data);\n\n// here checked finger print is exist or not.\n// if(!page.activeDevice || bh.responseApi.data[0].biometric_flag) {\nif(page.biometricFlag && bh.responseApi.data[0].biometric_flag) {\n    page.biometricFlag = true;\n}\n\n",
+        "functionName": "sd_jL6CigQh6BoqfvIR",
+        "category": "Function",
+        "x": 725,
+        "y": 600,
+        "wires": [
+            [
+                "sd_dWgNKMiO8m9HWQ0n"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_uqpw6hsRChrSTq7F",
+        "type": "Comments",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "comments": "<p>Get Device ID and Insert in DB,</p><p>Check finger print is exist or not</p>",
+        "category": "General",
+        "x": 725,
+        "y": 560,
+        "wires": [],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent",
+        "functionName": "sd_uqpw6hsRChrSTq7F"
+    },
+    {
+        "id": "sd_dWgNKMiO8m9HWQ0n",
+        "type": "PageCallService",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_FIBZuy3HVJ6QWLZD",
+            "type": "tab",
+            "createdDate": "2023-08-31T09:29:02.478Z",
+            "label": "agency_services",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_1Cu4uj22hsoQit7n",
+            "flowName": "agencyUpdate"
+        },
+        "inputVariables": [
+            {
+                "key": "bodyParams",
+                "map": true,
+                "valueType": "bh",
+                "value": "bodyParams"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/agency_services",
+        "startName": "agencyUpdate",
+        "inputParams": [
+            "bh.bodyParams"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_dWgNKMiO8m9HWQ0n",
+        "category": "General",
+        "x": 825,
+        "y": 600,
+        "wires": [
+            [
+                "sd_nxYxX97xFWnK4cCA"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_OQqccPNQhxH2LFDL",
+        "type": "UseDependency",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Finger Print Service",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "finger_printService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "fpService"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/finger_print/finger_print.service",
+        "serviceDesignerType": "pages",
+        "functionName": "fingerPrintService",
+        "category": "Function",
+        "x": 385,
+        "y": 140,
+        "wires": [
+            [
+                "sd_P4woxxvXVbKVKzMj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_P4woxxvXVbKVKzMj",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "initail check finger print",
+        "script": "await page.fpService.fingerPrintIsAvailable().then((response) => {\n  page.biometricFlag = response;\n}).catch((error) => {\n  page.biometricFlag = error;\n});\n\n// Debug finger print is avalibale or not?\n// console.log(\"biometricFlag:\", page.biometricFlag);\n\n\n// call findDevice service here!\nlet activeDevice = page.comService.findDevice();\npage.activeDevice = (activeDevice === 'android' || activeDevice === 'ios') ? true : false;\n\npage.deviceId = page.comService.getDeviceId();",
+        "functionName": "initailCheckFingerPrint",
+        "category": "Function",
+        "x": 485,
+        "y": 140,
+        "wires": [
+            [
+                "sd_AEeNRVU4gtv9Qs2c"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rs0BBpsRamC2bH2A",
+        "type": "PageStart",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "clear fileds",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "clearFileds",
+        "category": "General",
+        "x": 625,
+        "y": 460,
+        "wires": [
+            [
+                "sd_8tLpMsnFMUueHOER"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_8tLpMsnFMUueHOER",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "clear auth fileds",
+        "script": "{\n    page.agentAuthForm = page.fb.group({\n        agentCode: [''],\n        password: ['']\n    });\n}",
+        "functionName": "clearAuthFileds",
+        "category": "Function",
+        "x": 725,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nxYxX97xFWnK4cCA",
+        "type": "PageSwitch",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "biometricFlag",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.biometricFlag",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_nxYxX97xFWnK4cCA",
+        "category": "Function",
+        "x": 925,
+        "y": 600,
+        "wires": [
+            [
+                "sd_lv8doz5QkmBKn0hQ"
+            ],
+            [
+                "sd_b5OqQurtc0txRVoQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_9oB0qBXk49ogUxDk",
+        "type": "UseDependency",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "common Service",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "commonService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "comService"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/common/common.service",
+        "serviceDesignerType": "pages",
+        "functionName": "commonService",
+        "category": "Function",
+        "x": 285,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_b5OqQurtc0txRVoQ",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "auth with fingerPrint",
+        "script": "page.fpService.authenticateFingerprint()\n  .then(() => {    \n    page.loginError = \"bio succefull!\";\n  })\n  .catch((error) => {\n    alert('Fingerprint authentication failed: ' + error);\n  });",
+        "functionName": "authWithFingerPrint",
+        "category": "Function",
+        "x": 1025,
+        "y": 640,
+        "wires": [
+            [
+                "sd_PfrGbQnNht0cJaO8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pnPijvGYKYsci7ey",
+        "type": "PageSwitch",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "activeDevice",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.activeDevice",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_pnPijvGYKYsci7ey",
+        "category": "Function",
+        "x": 625,
+        "y": 640,
+        "wires": [
+            [
+                "sd_jL6CigQh6BoqfvIR"
+            ],
+            [
+                "sd_TbSIL7C528uGGjRW"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_TbSIL7C528uGGjRW",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// show message on screen\npage.loginError = bh.responseApi.msg;",
+        "functionName": "sd_TbSIL7C528uGGjRW",
+        "category": "Function",
+        "x": 725,
+        "y": 680,
+        "wires": [
+            [
+                "sd_PfrGbQnNht0cJaO8"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_CqixTB0ZRAk4oofu",
+        "type": "Comments",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "comments": "<p>Navigate to dashboard.</p>",
+        "category": "General",
+        "x": 725,
+        "y": 720,
+        "wires": [],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent",
+        "functionName": "sd_CqixTB0ZRAk4oofu"
+    },
+    {
+        "id": "sd_dBC2QPeeN5GTLags",
+        "type": "PageStart",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "navigate to dashboard",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "navigateToDashboard",
+        "category": "General",
+        "x": 825,
+        "y": 340,
+        "wires": [
+            [
+                "sd_9d026YISHJB1Qprp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    },
+    {
+        "id": "sd_9d026YISHJB1Qprp",
+        "type": "Navigation",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "dashboard route",
+        "path": "/dashboard",
+        "functionName": "dashboardRoute",
+        "category": "Navigation",
+        "x": 925,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_PfrGbQnNht0cJaO8",
+        "type": "PageCallService",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_kygG0KgUhTYJTmUl",
+            "type": "tab",
+            "createdDate": "2023-08-29T14:34:54.487Z",
+            "label": "login",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_dBC2QPeeN5GTLags",
+            "flowName": "navigateToDashboard"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "navigateToDashboard",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_PfrGbQnNht0cJaO8",
+        "category": "General",
+        "x": 1125,
+        "y": 680,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_PZVqQs89sLFgKU5M",
+        "type": "PageCallService",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_kygG0KgUhTYJTmUl",
+            "type": "tab",
+            "createdDate": "2023-08-29T14:34:54.487Z",
+            "label": "login",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0
+        },
+        "flow": {
+            "flowId": "sd_dBC2QPeeN5GTLags",
+            "flowName": "navigateToDashboard"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "navigateToDashboard",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_PZVqQs89sLFgKU5M",
+        "category": "General",
+        "x": 525,
+        "y": 460,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_I9vzp02naeLKBZ5H",
+        "type": "OpenDialog",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Otp Dialog  ",
+        "outputs": 4,
+        "flow": {
+            "flowId": "sd_hKIQlYdXM7F0gBqg",
+            "label": "otpVerifyDialog"
+        },
+        "relativePath": "app/components/dialogs/otpVerifyDialog",
+        "data": "this.page",
+        "ariaDescribedBy": "this.page",
+        "ariaLabel": "this.page",
+        "ariaLabelledBy": "this.page",
+        "autoFocus": "this.page",
+        "backdropClass": "this.page",
+        "closeOnNavigation": "this.page",
+        "direction": "this.page",
+        "disableClose": "this.page",
+        "hasBackdrop": "this.page",
+        "height": "this.page",
+        "maxHeight": "this.page",
+        "minHeight": "this.page",
+        "width": "this.page",
+        "maxWidth": "this.page",
+        "minWidth": "this.page",
+        "panelClass": "this.page",
+        "position": "this.page",
+        "restoreFocus": "this.page",
+        "role": "this.page",
+        "resultMapping": "this.page.resultotp",
+        "functionName": "otpDialog",
+        "category": "Dialog",
+        "x": 525,
+        "y": 640,
+        "wires": [
+            [],
+            [
+                "sd_pnPijvGYKYsci7ey"
+            ],
+            [],
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaDescribedBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabel": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "ariaLabelledBy": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "autoFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "backdropClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "closeOnNavigation": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "direction": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "disableClose": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "hasBackdrop": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "height": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minHeight": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "width": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "maxWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "minWidth": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "panelClass": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "position": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "restoreFocus": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "role": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "this.page",
+                "value": "resultotp",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "loginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_856piG8pq1dMk8eQ",
+        "type": "Script",
+        "z": "sd_kygG0KgUhTYJTmUl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(\"activeDevice:\", page.activeDevice);\n// console.log(page.resultotp)",
+        "functionName": "sd_856piG8pq1dMk8eQ",
+        "category": "Function",
+        "x": 600,
+        "y": 740,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "loginComponent"
+    }
+]

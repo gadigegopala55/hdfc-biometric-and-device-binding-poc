@@ -1,0 +1,9 @@
+{
+    "_DM_1wo0oo92n": {
+        "id": "_DM_1wo0oo92n",
+        "name": "agent_db",
+        "dbType": "dbModel",
+        "dbConfigId": "sd_dfYj0bD4aEucAtoz",
+        "dbName": "postgres"
+    }
+}

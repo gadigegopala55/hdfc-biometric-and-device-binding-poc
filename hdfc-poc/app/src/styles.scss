@@ -1,0 +1,156 @@
+/*Importing default angular material css theme. */
+
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+// ############## Define Veriables ##################
+:root {
+    --primery-color : #e22323;
+    --secondry-color : #AFAFAF;
+    --white-color: #fff;
+    --black-color: #000;
+    --transparent-color: rgba(255, 255, 255, 0.0);
+
+}
+
+// ############## Common classes start ###################
+
+.text-primery {
+    color: var(--primery-color);
+}
+
+.text-secondry {
+    color: var(--secondry-color);
+}
+
+.bg-primery {
+    background: var(--primery-color);
+}
+
+.text-secondry {
+    background: var(--secondry-color);
+}
+
+.basic-card {
+    background: #fff;
+    // padding: 2rem;
+}
+
+.heading-title {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.sub-heading-title {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.basic-inputfiled {
+    border-radius: 50px !important;
+    .mat-form-field-wrapper {
+        padding: 0;
+    }
+    .mat-form-field-infix {
+        border-top: 0;
+    }    
+}
+
+.primery-btn {
+    background: var(--primery-color);
+    color: var(--white-color);
+    padding: 0.18em 2em !important;
+    border-radius: 30px !important;
+    box-shadow: none !important;
+}
+
+.secondry-btn {
+    border: 1px solid var(--secondry-color) !important;
+    background: var(--transparent-color);
+    color: var(--black-color);
+    padding: 0.18em 2em !important;
+    border-radius: 30px !important;
+    box-shadow: none !important;
+}
+
+// ############## Common classes end ###################
+
+// ############## Work Start Here #################
+
+* {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+// html, body {
+//     font-size: 12px;
+// }
+
+.login-container {
+    scroll-behavior: unset;
+    overflow: hidden;
+    background: url('assets/Web/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    // width: 100%;
+
+    // logo
+    .logo {
+        width: 10rem;
+    }
+
+    .login-card {
+        width: 20rem;
+        // height: 15rem;
+        padding: 1.5em;
+    }
+
+    .code-title {
+        font-size: 14px;
+        color: var(--secondry-color);
+    }
+}
+
+// biometric alert card
+.bio-alert-card {
+    // width: 20em;
+    // padding: 2em;
+    .finger-icon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--secondry-color);
+        border-radius: 100px;
+        .finger-icon-img {
+            width: 40px;
+            color: var(--secondry-color);
+        }
+    }
+}
+
+// device verification card
+.otp-verification-card {
+    // padding: 2em;
+    .message-icon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--secondry-color);
+        border-radius: 100px;
+        .message-icon-img {
+            width: 30px;
+            color: var(--secondry-color);
+        }
+    }
+}

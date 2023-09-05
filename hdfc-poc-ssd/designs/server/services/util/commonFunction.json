@@ -1,0 +1,199 @@
+[
+    {
+        "id": "SSD_SERVICE_ID_sd_8m7T1Fz0hFKGTA3m",
+        "type": "tab",
+        "createdDate": "2023-08-30T08:49:20.522Z",
+        "label": "commonFunction",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "commonFunction",
+        "relativeParentPath": "util"
+    },
+    {
+        "id": "sd_NxRBzEv1JatjAGDe",
+        "type": "Start",
+        "z": "SSD_SERVICE_ID_sd_8m7T1Fz0hFKGTA3m",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Hashing",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "payload",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "hashValue",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "hashing",
+        "category": "General",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "sd_G1R6cRSXJLlbtSQm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "commonFunction"
+    },
+    {
+        "id": "sd_G1R6cRSXJLlbtSQm",
+        "type": "Script",
+        "z": "SSD_SERVICE_ID_sd_8m7T1Fz0hFKGTA3m",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let bcrypt = require('bcryptjs');\n\nbh.local.hashValue = new Promise((resolve, reject) => {\n  bcrypt.hash(bh.input.payload, 8, (err, hash) => {\n    if (err) {\n      reject(err);\n    } else {\n      resolve(hash);\n    }\n  });\n});\n",
+        "functionName": "sd_G1R6cRSXJLlbtSQm",
+        "category": "Function",
+        "x": 260,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "commonFunction",
+        "generated": true
+    },
+    {
+        "id": "sd_SgcPIeY6HZOKTDqM",
+        "type": "Start",
+        "z": "SSD_SERVICE_ID_sd_8m7T1Fz0hFKGTA3m",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "generate agency id",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "agencyId",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "generateAgencyId",
+        "category": "General",
+        "x": 105,
+        "y": 180,
+        "wires": [
+            [
+                "sd_KessahW3dmLbiiuH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "commonFunction"
+    },
+    {
+        "id": "sd_KessahW3dmLbiiuH",
+        "type": "Script",
+        "z": "SSD_SERVICE_ID_sd_8m7T1Fz0hFKGTA3m",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "function generateRandomIdentifier() {\n  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // Characters for the random prefix\n  const prefixLength = 2; // Length of the random prefix\n  const numLength = 3; // Minimum length of the dynamic number\n\n  let prefix = '';\n  for (let i = 0; i < prefixLength; i++) {\n    const randomIndex = Math.floor(Math.random() * characters.length);\n    prefix += characters.charAt(randomIndex);\n  }\n\n  const randomNum = Math.floor(Math.random() * Math.pow(10, numLength)).toString();\n  const paddedNum = randomNum.padStart(numLength, '0');\n  const identifier = `${prefix}/${paddedNum}`;\n\n  return identifier;\n}\n\n// Example usage:\nbh.local.agencyId = generateRandomIdentifier();\n\n",
+        "functionName": "sd_KessahW3dmLbiiuH",
+        "category": "Function",
+        "x": 265,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "commonFunction",
+        "generated": true
+    },
+    {
+        "id": "sd_uqM4zfoVV7YifkNN",
+        "type": "Start",
+        "z": "SSD_SERVICE_ID_sd_8m7T1Fz0hFKGTA3m",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "verify Hash",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "hashValue",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "originalValue",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "resultValue",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "verifyHash",
+        "category": "General",
+        "x": 405,
+        "y": 80,
+        "wires": [
+            [
+                "sd_7nUVUOo0AyUHyLOa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "commonFunction"
+    },
+    {
+        "id": "sd_7nUVUOo0AyUHyLOa",
+        "type": "Script",
+        "z": "SSD_SERVICE_ID_sd_8m7T1Fz0hFKGTA3m",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let bcrypt = require('bcryptjs');\nconsole.log(bh.input.originalValue, bh.input.hashValue);\n\nbh.local.resultValue = new Promise((resolve, reject) => {\n  bcrypt.compare(bh.input.originalValue, bh.input.hashValue)\n    .then((match) => {\n      if (match) {\n        resolve(match);\n      } else {\n        reject('Password is incorrect.');\n      }\n    })\n    .catch((error) => {\n      reject(error);\n    });\n});",
+        "functionName": "sd_7nUVUOo0AyUHyLOa",
+        "category": "Function",
+        "x": 565,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "commonFunction",
+        "generated": true
+    }
+]

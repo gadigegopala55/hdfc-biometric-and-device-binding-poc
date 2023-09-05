@@ -1,0 +1,167 @@
+{
+    "name": "agent_db",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "",
+    "type": "object",
+    "id": "_EN_ztxyh089jt",
+    "y": 78,
+    "properties": {
+        "id": {
+            "name": "id",
+            "format": "",
+            "type": "number",
+            "description": "",
+            "default": "",
+            "__n__metadata__": {
+                "id": "_Att_qipya3n6cs",
+                "nullable": false,
+                "dbType": "bigint",
+                "primary": true,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {
+                    "primaryGenerated": true
+                }
+            }
+        },
+        "username": {
+            "name": "username",
+            "format": "",
+            "type": "string",
+            "description": "",
+            "default": "",
+            "__n__metadata__": {
+                "id": "_Att_xd2arkyusw",
+                "subCategoryType": null,
+                "nullable": false,
+                "dbType": "text",
+                "primary": false,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {}
+            }
+        },
+        "password": {
+            "name": "password",
+            "format": "",
+            "type": "string",
+            "description": "",
+            "default": "",
+            "__n__metadata__": {
+                "id": "_Att_g1tu215y01",
+                "subCategoryType": null,
+                "nullable": false,
+                "dbType": "text",
+                "primary": false,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {}
+            }
+        },
+        "agent_code": {
+            "name": "agent_code",
+            "format": "",
+            "type": "string",
+            "description": "",
+            "default": "",
+            "__n__metadata__": {
+                "id": "_Att_noxhzuxj78",
+                "subCategoryType": null,
+                "nullable": false,
+                "dbType": "text",
+                "primary": false,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {}
+            }
+        },
+        "device_ids": {
+            "name": "device_ids",
+            "format": "",
+            "type": "object",
+            "description": "",
+            "default": "",
+            "__n__metadata__": {
+                "id": "_Att_3wh1hh2m8l",
+                "nullable": true,
+                "dbType": "jsonb",
+                "primary": false,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {}
+            }
+        },
+        "biometric_flag": {
+            "name": "biometric_flag",
+            "format": "",
+            "type": "boolean",
+            "description": "",
+            "default": false,
+            "__n__metadata__": {
+                "id": "_Att_nxgk1gploj",
+                "subCategoryType": null,
+                "nullable": true,
+                "dbType": "boolean",
+                "primary": false,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {}
+            }
+        },
+        "created_at": {
+            "name": "created_at",
+            "format": "date-time",
+            "type": "string",
+            "description": "",
+            "default": "current",
+            "__n__metadata__": {
+                "id": "_Att_trkqfgy5s2",
+                "subCategoryType": "date",
+                "nullable": true,
+                "dbType": "timestamp with time zone",
+                "primary": false,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {
+                    "specialDateColumnType": "create"
+                },
+                "precision": 6
+            }
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "format": "date-time",
+            "type": "string",
+            "description": "",
+            "default": "current",
+            "__n__metadata__": {
+                "id": "_Att_dg1jd9x5x5",
+                "subCategoryType": "date",
+                "nullable": true,
+                "dbType": "timestamp with time zone",
+                "primary": false,
+                "placeholder": "",
+                "dbColName": "",
+                "constraints": {
+                    "specialDateColumnType": "update"
+                },
+                "precision": 6
+            }
+        }
+    },
+    "required": [
+        "username",
+        "password",
+        "agent_code"
+    ],
+    "value": "",
+    "x": 181,
+    "userList": {
+        "SSD_SERVICE_ID_sd_95awrkAwOhbtVjaf": [
+            "sd_xxCbW1xb92NscFtW",
+            "sd_9TyhHPuFlrGpmtoi",
+            "sd_NK3K8jtJS8SKV1SZ",
+            "sd_8J5qJTACPryrpFet"
+        ]
+    }
+}

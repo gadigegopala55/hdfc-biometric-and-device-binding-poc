@@ -1,0 +1,197 @@
+[
+    {
+        "id": "sd_hKIQlYdXM7F0gBqg",
+        "type": "tab",
+        "createdDate": "2023-08-30T05:31:24.364Z",
+        "label": "otpVerifyDialog",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "otpVerifyDialogComponent"
+    },
+    {
+        "id": "sd_7qEMV3wW4O32GUd2",
+        "type": "OnInit",
+        "z": "sd_hKIQlYdXM7F0gBqg",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_7qEMV3wW4O32GUd2",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_JqHKQ285ke6903Rb"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "otpVerifyDialogComponent"
+    },
+    {
+        "id": "sd_JqHKQ285ke6903Rb",
+        "type": "PageVariables",
+        "z": "sd_hKIQlYdXM7F0gBqg",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "otp",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "otpVerify",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_JqHKQ285ke6903Rb",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "otpVerifyDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_EufW79Ci1RtKBWTG",
+        "type": "PageStart",
+        "z": "sd_hKIQlYdXM7F0gBqg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "onOtpChange",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "onOtpChange",
+        "category": "General",
+        "x": 85,
+        "y": 260,
+        "wires": [
+            [
+                "sd_C3bynsYVEXrZOtF7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "otpVerifyDialogComponent"
+    },
+    {
+        "id": "sd_1TJJulzbvWzBlJ5c",
+        "type": "CloseDialog",
+        "z": "sd_hKIQlYdXM7F0gBqg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "this.page.otp",
+        "functionName": "sd_1TJJulzbvWzBlJ5c",
+        "category": "Dialog",
+        "x": 325,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "this.page",
+                "value": "otp",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "otpVerifyDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7BqVinuuXaMB6osp",
+        "type": "PageStart",
+        "z": "sd_hKIQlYdXM7F0gBqg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Close Dialog",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "closeDialog",
+        "category": "General",
+        "x": 85,
+        "y": 180,
+        "wires": [
+            [
+                "sd_akIjD4Q0whqDZuDC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "otpVerifyDialogComponent"
+    },
+    {
+        "id": "sd_C3bynsYVEXrZOtF7",
+        "type": "Script",
+        "z": "sd_hKIQlYdXM7F0gBqg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "otp content",
+        "script": "console.log(\"otp:\", bh.input.event);\n\npage.otp = bh.input.event;",
+        "functionName": "otpContent",
+        "category": "Function",
+        "x": 205,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "otpVerifyDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_akIjD4Q0whqDZuDC",
+        "type": "Script",
+        "z": "sd_hKIQlYdXM7F0gBqg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "otp verification",
+        "script": "console.log(\"otp:\", page.otp);",
+        "functionName": "otpVerification",
+        "category": "Function",
+        "x": 205,
+        "y": 180,
+        "wires": [
+            [
+                "sd_1TJJulzbvWzBlJ5c"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "otpVerifyDialogComponent",
+        "generated": true
+    }
+]

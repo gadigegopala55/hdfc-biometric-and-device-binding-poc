@@ -1,0 +1,297 @@
+[
+    {
+        "id": "sd_W3grTVJ3LpFXsMUk",
+        "type": "tab",
+        "createdDate": "2023-08-29T17:22:10.953Z",
+        "label": "biometricDialog",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "biometricDialogComponent"
+    },
+    {
+        "id": "sd_Li2yKVaanZCfi1dw",
+        "type": "OnInit",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_Li2yKVaanZCfi1dw",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_GdclFTnlnWrQjqTI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "biometricDialogComponent"
+    },
+    {
+        "id": "sd_GdclFTnlnWrQjqTI",
+        "type": "PageVariables",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_GdclFTnlnWrQjqTI",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_HL8iqSmGJi56RI5V"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "biometricDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zIbcoQ6Grr9Tq6xO",
+        "type": "CloseDialog",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "data": "\"Done\"",
+        "functionName": "sd_zIbcoQ6Grr9Tq6xO",
+        "category": "Dialog",
+        "x": 260,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "data": {
+                "type": "str",
+                "value": "Done",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "biometricDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_gHV2G0oQUG9bAenr",
+        "type": "PageStart",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Close Biometric Dialog",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "closeBiometricDialog",
+        "category": "General",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "sd_zIbcoQ6Grr9Tq6xO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "biometricDialogComponent"
+    },
+    {
+        "id": "sd_IOB4ulaUWm0EuWmF",
+        "type": "PageStart",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "biometric accept",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "biometricAccept",
+        "category": "General",
+        "x": 125,
+        "y": 280,
+        "wires": [
+            [
+                "sd_aSbyjdiDTwr2uWt3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "biometricDialogComponent"
+    },
+    {
+        "id": "sd_JdDi0nA2KRTMT8AE",
+        "type": "Script",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "let {username, biometric_flag} = bh.responseApi[0];\n\nbh.bodyParams = {\n    username,\n    biometric_flag : true\n}",
+        "functionName": "sd_JdDi0nA2KRTMT8AE",
+        "category": "Function",
+        "x": 365,
+        "y": 280,
+        "wires": [
+            [
+                "sd_AQwu7DVwpsDjuAed"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "biometricDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aSbyjdiDTwr2uWt3",
+        "type": "GetDialogData",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "dialogDataMapping": "bh.responseApi",
+        "functionName": "sd_aSbyjdiDTwr2uWt3",
+        "category": "Dialog",
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "sd_JdDi0nA2KRTMT8AE"
+            ]
+        ],
+        "__ssdTypeInputs__": {
+            "dialogDataMapping": {
+                "type": "bh",
+                "value": "responseApi",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "biometricDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AQwu7DVwpsDjuAed",
+        "type": "PageCallService",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_FIBZuy3HVJ6QWLZD",
+            "type": "tab",
+            "createdDate": "2023-08-31T09:29:02.478Z",
+            "label": "agency_services",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_1Cu4uj22hsoQit7n",
+            "flowName": "agencyUpdate"
+        },
+        "inputVariables": [
+            {
+                "key": "bodyParams",
+                "map": true,
+                "valueType": "bh",
+                "value": "bodyParams"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/agency_services",
+        "startName": "agencyUpdate",
+        "inputParams": [
+            "bh.bodyParams"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_AQwu7DVwpsDjuAed",
+        "category": "General",
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "sd_zIbcoQ6Grr9Tq6xO",
+                "sd_fl6IyeuMVELAniZx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "biometricDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_HL8iqSmGJi56RI5V",
+        "type": "UseDependency",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Finger Print Service",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "finger_printService",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "fpService"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "app/services/finger_print/finger_print.service",
+        "serviceDesignerType": "pages",
+        "functionName": "fingerPrintService",
+        "category": "Function",
+        "x": 285,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "biometricDialogComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fl6IyeuMVELAniZx",
+        "type": "Script",
+        "z": "sd_W3grTVJ3LpFXsMUk",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "auth with finger print",
+        "script": "page.fpService.authenticateFingerprint()\n  .then(() => {    \n    page.loginError = \"bio succefull!\";\n    // todo: go to dashboard!\n  })\n  .catch((error) => {\n    alert('Fingerprint authentication failed: ' + error);\n  });",
+        "functionName": "authWithFingerPrint",
+        "category": "Function",
+        "x": 585,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "biometricDialogComponent",
+        "generated": true
+    }
+]

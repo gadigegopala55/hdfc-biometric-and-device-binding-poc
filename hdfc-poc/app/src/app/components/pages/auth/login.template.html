@@ -1,0 +1,35 @@
+<div fxLayout="column wrap" class="login-container" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Logo.jpg" class="logo"></div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <form [formGroup]="page.agentAuthForm" (ngSubmit)="page.activeAgent? directLogin(): agentLogin()">
+      <div fxLayout="column wrap" class="login-card basic-card" fxLayoutGap="10" fxLayoutAlign="start center" [fxShow]="true">
+        <div class="heading-title">
+          KEY PARTNER LOGIN</div>
+        <div *ngIf="page.activeAgent" class="code-title">
+          Agency Code: <span style="font-weight: bold; color: black">{{page.activeAgent.agent_code}}</span></div>
+        <div *ngIf="!page.activeAgent" class="basic-inputfiled">
+
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [(ngModel)]="page.agentCodeValue" placeholder="Agency Code Eg: AA/111" [required]="false" formControlName="agentCode" onInput="this.value = this.value.toUpperCase()" (ngModelChange)="onInputChange($event)">
+
+          </mat-form-field>
+        </div>
+        <div class="basic-inputfiled">
+
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput type="password" placeholder="Password" [required]="false" formControlName="password">
+
+          </mat-form-field>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="10" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="primery-btn" type="submit">SUBMIT</button><button mat-raised-button class="secondry-btn" (click)="clearFileds()" type="button">CLEAR</button></div>
+        <div fxLayout="row wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+          <div style="text-align: center;" class="sub-heading-title">
+            <span *ngIf="page.loginError" style="color: red">{{page.loginError}}<br></span>
+            Haven&apos;t create account?
+            <span class="text-primery">Registration</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
